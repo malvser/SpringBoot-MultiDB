@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    wshop:
+      dataSourceClassName: org.mysql.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:mysql://192.168.33.2:3306/wshop
+      username: wshop
+      password: WSAdmin
+    wshop_common:
+      dataSourceClassName: org.mysql.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:mysql://192.168.33.2:3306/wshop_common
+      username: wshop
+      password: WSAdmin
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 9091
